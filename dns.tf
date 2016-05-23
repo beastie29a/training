@@ -22,7 +22,7 @@ resource "dnsimple_record" "web" {
   name   = "${var.dnsimple_subdomain}"
   value  = "${aws_instance.haproxy.public_ip}"
   type   = "A"
-  ttl    = 30
+  ttl    = 60
 }
 
 # Output the DNS address so you can easily copy-paste into the browser.
